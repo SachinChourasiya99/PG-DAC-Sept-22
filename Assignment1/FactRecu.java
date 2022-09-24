@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class FactRecu{
+ public static void main(String []args){
+	 
+  Scanner num=new Scanner(System.in);
+  int c = num.nextInt();
+  System.out.println("Enter a Number For Factorial : "+c);
+     
+	 /*FactRecu a = new FactRecu();     //Fact1 is non-static method.
+	 int b = a.Facto1(c);*/
+	 
+	 int b = Facto1(c);
+	 System.out.println("Factorial of "+c+" is: "+b);
+	 System.out.println("-------------------");
+ }
+   //int Facto1(int d)
+   static int Facto1(int d){
+    if(d==0)
+      return 1;
+  
+    else
+      return(d * Facto1(d-1));		
+   }
+}
